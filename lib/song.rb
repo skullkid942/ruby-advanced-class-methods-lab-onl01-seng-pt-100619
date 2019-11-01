@@ -54,7 +54,14 @@ class Song
   end 
   
   def self.create_from_filename(filename)
+    row = filename
+    data = row.split(" - ")
+    artist_name = data[0]
+    song_name = data[1]
     
+    song = self.new
+    song.name = song_name
+    song.artist_name = artist_name
     
     song.save
     song 
