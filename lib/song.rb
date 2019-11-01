@@ -43,7 +43,8 @@ class Song
   
   def self.new_from_filename(filename)
     row = filename
-    data = row.split()
+    data = row.split("-")
+    
   end 
 
 end
